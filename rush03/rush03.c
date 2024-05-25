@@ -6,7 +6,7 @@
 /*   By: cnzk <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 21:35:02 by cnzk              #+#    #+#             */
-/*   Updated: 2024/05/25 11:08:03 by cnzk             ###   ########.fr       */
+/*   Updated: 2024/05/25 11:53:07 by cnzk             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	body(int col, int rows)
 
 void	rush(int col, int rows)
 {
-	if (rows < 1)
+	if (col < 1 || rows < 1)
 		return ;
 	top_bottom(col);
 	body(col, rows-2);
@@ -69,6 +69,7 @@ void	rush(int col, int rows)
 
 int	main(void)
 {
+	rush(0,2);
 	rush(2,0);
 	return (0);
 }
