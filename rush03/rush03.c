@@ -6,7 +6,7 @@
 /*   By: cnzk <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 21:35:02 by cnzk              #+#    #+#             */
-/*   Updated: 2024/05/24 22:39:59 by cnzk             ###   ########.fr       */
+/*   Updated: 2024/05/25 11:08:03 by cnzk             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ void	top_bottom(int col)
 	int	i;
 
 	i = 1;
-	while(i <= col)
+	while (i <= col)
 	{
-		if(i == 1)
+		if (i == 1)
 			_write('A');
-		else if(i == col)
+		else if (i == col)
 			_write('C');
 		else
 			_write('B');
@@ -41,12 +41,12 @@ void	body(int col, int rows)
 	int	j;
 
 	i = 1;
-	while(i <= rows)
+	while (i <= rows)
 	{
 		j = 1;
-		while(j <= col)
+		while (j <= col)
 		{
-			if(j == 1 || j == col)
+			if (j == 1 || j == col)
 				_write('B');
 			else
 				_write(' ');
@@ -59,6 +59,8 @@ void	body(int col, int rows)
 
 void	rush(int col, int rows)
 {
+	if (rows < 1)
+		return ;
 	top_bottom(col);
 	body(col, rows-2);
 	if (rows > 1)
@@ -67,10 +69,6 @@ void	rush(int col, int rows)
 
 int	main(void)
 {
-	rush(5, 3);
-	rush(5, 1);	
-	rush(1, 1);
-	rush(1, 5);
-	rush(4, 4);
+	rush(2,0);
 	return (0);
 }
