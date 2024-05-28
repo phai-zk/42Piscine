@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cnzk <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: chinujte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/25 12:30:35 by cnzk              #+#    #+#             */
-/*   Updated: 2024/05/25 12:37:56 by cnzk             ###   ########.fr       */
+/*   Created: 2024/05/26 11:58:39 by chinujte          #+#    #+#             */
+/*   Updated: 2024/05/26 13:30:51 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putnbr.c(int n)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
+	int	n;
 
-}
-
-int	main(void)
-{
-	ft_putnbr(42);
-	return (0);
+	n = *a;
+	*a = *a / *b;
+	*b = n % *b;
 }

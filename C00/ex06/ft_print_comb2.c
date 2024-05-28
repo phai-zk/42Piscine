@@ -6,67 +6,51 @@
 /*   By: cnzk <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 12:09:11 by cnzk              #+#    #+#             */
-/*   Updated: 2024/05/25 12:12:00 by cnzk             ###   ########.fr       */
+/*   Updated: 2024/05/27 12:26:37 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	printChar(char	c)
+void	print(char c)
 {
 	write(1, &c, 1);
 }
 
-void	_write(char i, char j, char k, char w)
+void	_write(int n[4])
 {
-	if(i <= k && j < w)
-	{
-		printChar(i);
-		printChar(j);
-		printChar(' ');
-		printChar(k);
-		printChar(w);
-
-		if(!(i == '9' && j == '8' && k == '9'&& w == '9'))
-		{
-			printChar(',');
-			printChar(' ');
-		}
-	}
+	print(n[0] + 48);
+	print(n[1] + 48);
+	print(' ');
+	print(n[2] + 48);
+	print(n[3] + 48);
+	if (!( n[0] ==  9 && n[1] == 8))
+		write(1, ", ", 2);
 }
 
-void	comb2(void)
+void	ft_print_comb2(void)
 {
-	char	i;
-	char	j;
-	char	k;
-	char	w;
-
-	i = '0';
-	while(i <= '9')
+	int	i;
+	int	j;
+	int	n[4];
+	
+	i = 0;
+	n[0] = 0;
+	n[1] = 0;
+	n[2] = 0;
+	n[3] = 0;
+	while (i <= 98)
 	{
-		j = '0';
-		while(j <= '9')
+		n[0] = i / 10;
+		n[1] = i % 10;
+		j = i + 1;
+		while (j <= 99)
 		{
-			k = '0';
-			while(k <= '9')
-			{
-				w = '0';
-				while(w++ <= '9')
-				{
-					_write(i, j, k, w);
-					w++;
-				}
-				k++;
-			}
+			n[2] = j / 10;
+			n[3] = j % 10;
+			_write(n);
 			j++;
 		}
 		i++;
 	}
-}
-
-int	main(void)
-{
-	comb2();
-	return (0);
 }
