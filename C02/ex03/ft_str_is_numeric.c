@@ -6,11 +6,11 @@
 /*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 10:13:49 by chinujte          #+#    #+#             */
-/*   Updated: 2024/05/28 18:10:09 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/05/29 22:01:49 by cnzk             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	t_str_is_numeric(char *str)
+int	ft_str_is_numeric(char *str)
 {
 	int	i;
 
