@@ -1,27 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/28 15:47:19 by chinujte          #+#    #+#             */
-/*   Updated: 2024/05/29 11:10:46 by chinujte         ###   ########.fr       */
+/*   Created: 2024/05/29 16:56:33 by chinujte          #+#    #+#             */
+/*   Updated: 2024/05/29 18:55:43 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-char	*ft_strupcase(char *str)
+char	*check(char *str, char *find)
 {
 	int	i;
 
 	i = 0;
-	while (str[i])
+	while (find[i])
 	{
-		if (97 <= str[i] && str[i] <= 122)
-			str[i] -= 32;
-		i++;
+		if (str[i] != find[i])
+			return (0);
+		i++;		
 	}
-	return (str);
+	return str;
 }
+
+char	*ft_strstr(char *str, char *to_find)
+{
+	while (*str)
+	{
+		if (str[0] == to_find[0])
+			return check(str, to_find);
+		str++;	
+	}
+	return (0);
+}
+/*
+#include <stdio.h>
+int main(void)
+{
+	char	str[] = "dfs";
+	char	tofind[] = "World";
+	printf("%s", ft_strstr(str, tofind));
+	return 0;
+}
+*/
