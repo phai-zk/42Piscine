@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 01:41:15 by cnzk              #+#    #+#             */
-/*   Updated: 2024/05/31 03:00:55 by cnzk             ###   ########.fr       */
+/*   Updated: 2024/05/31 16:26:59 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,9 +68,9 @@ int	turn_to_int(char *str)
 
 int ft_atoi(char *str)
 {
+	char	*nbr;
 	int		i;
 	int		j;
-	char	*nbr;
 	int		arbitrary;
 
 	i = 0;
@@ -94,7 +94,7 @@ int ft_atoi(char *str)
 	nbr[j] = '\0';
 	return (turn_to_int(nbr) * arbitrary);
 }
-/*
+
 #include <stdio.h>
 int main(int argc, char **argv)
 {
@@ -105,4 +105,3 @@ int main(int argc, char **argv)
 	printf("%d", x);
 	return 0;
 }
-*/

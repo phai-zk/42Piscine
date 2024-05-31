@@ -6,13 +6,13 @@
 /*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 19:05:23 by chinujte          #+#    #+#             */
-/*   Updated: 2024/05/29 19:16:39 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/05/31 15:50:08 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	_strlen(char *c)
+unsigned int	_strlen(char *c)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (c[i])
@@ -23,16 +23,16 @@ int	_strlen(char *c)
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
-	int	len;
+	unsigned int	len;
 
 	i = 0;
 	len = _strlen(dest);
 	while (src[i] && i < size)
 	{
 		dest[len + i] = src[i];
-		i++;		
+		i++;
 	}
-	return ((unsigned int)len + i);
+	return (len + i);
 }
 /*
 #include <stdio.h>

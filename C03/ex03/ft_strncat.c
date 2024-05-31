@@ -6,7 +6,7 @@
 /*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 16:30:42 by chinujte          #+#    #+#             */
-/*   Updated: 2024/05/29 16:58:33 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/05/31 18:01:47 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 /*
 #include <stdio.h>
 #include <string.h>
-int main(int argc, char const *argv[])
+int main(void)
 {
 	char    dest[15] = "Hello";
 	char    src[15] = "World";
