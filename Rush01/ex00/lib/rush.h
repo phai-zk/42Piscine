@@ -1,0 +1,1 @@
+void	rush(int **frame);
