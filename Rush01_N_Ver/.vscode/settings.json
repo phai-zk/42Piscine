@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "str.h": "c",
+        "rules.h": "c",
+        "main_rule.h": "c"
+    }
+}

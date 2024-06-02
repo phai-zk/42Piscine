@@ -1,30 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush.c                                             :+:      :+:    :+:   */
+/*   main_rule.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/01 10:35:52 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/01 13:49:49 by chinujte         ###   ########.fr       */
+/*   Created: 2024/06/02 17:36:27 by chinujte          #+#    #+#             */
+/*   Updated: 2024/06/02 20:18:37 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-void	rush(int **frame)
-{
-    int i;
-    int j;
-    
-    i = 0;
-	while (i < 4) {
-        j = 0;
-        while (j < 4) {
-            printf("%d ", frame[i][j]);
-            j++;
-        }
-        printf("\n");
-        i++;
-    }
-}
+int	find_duplicate(int **tab, int row, int col, int tower);
+int	check_col_row(int **tab, int pos, int n, int **frame);

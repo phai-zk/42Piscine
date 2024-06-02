@@ -5,10 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/01 18:06:25 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/01 19:04:27 by chinujte         ###   ########.fr       */
+/*   Created: 2024/06/02 17:45:03 by chinujte          #+#    #+#             */
+/*   Updated: 2024/06/02 20:02:24 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	check_double(int tab[4][4], int pos, int tower);
-int check_col_row(int tab[4][4], int row, int col, int col_row[4][4]);
+int	rows_left(int **tab, int pos, int n, int *col_row);
+int	rows_right(int **tab, int pos, int n, int *col_row);
+int	column_down(int **tab, int pos, int n, int *col_row);
+int	column_up(int **tab, int pos, int n, int *col_row);

@@ -1,0 +1,2 @@
+clear
+cc -Wall -Wextra -Werror -o Rush-01 ./ex00/*.c
