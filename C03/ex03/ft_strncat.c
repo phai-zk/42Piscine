@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 16:30:42 by chinujte          #+#    #+#             */
-/*   Updated: 2024/05/31 18:01:47 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/04 17:22:26 by cnzk             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	_strlen(char *c)
+unsigned int	_strlen(char *c)
 {
-	int	i;
+ 	unsigned int	i;
 
 	i = 0;
 	while (c[i])
@@ -22,16 +22,17 @@ int	_strlen(char *c)
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
+	unsigned int	len;
 	unsigned int	i;
-	int				len;
 
-	i = 0;
 	len = _strlen(dest);
+	i = 0;
 	while (src[i] && i < nb)
 	{
 		dest[len + i] = src[i];
 		i++;
 	}
+	dest[len + i] = '\0';
 	return (dest);
 }
 /*
@@ -39,8 +40,8 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 #include <string.h>
 int main(void)
 {
-	char    dest[15] = "Hello";
-	char    src[15] = "World";
+	char    dest[10] = "Hello ";
+	char    src[10] = "World";
 	printf("%s\n", ft_strncat(dest, src, 1));
 	// printf("%s", strcat(dest, src));
 	return 0;

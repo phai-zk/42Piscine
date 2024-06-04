@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 19:05:23 by chinujte          #+#    #+#             */
-/*   Updated: 2024/05/31 15:50:08 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/05 01:23:14 by cnzk             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,23 +23,29 @@ unsigned int	_strlen(char *c)
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
-	unsigned int	len;
+	unsigned int	len_d;
+	unsigned int	len_s;
 
 	i = 0;
-	len = _strlen(dest);
-	while (src[i] && i < size)
+	len_d = _strlen(dest);
+	len_s = _strlen(src);
+	if (size <= len_d)
+		return (size + len_s);	
+	while (src[i] && i + len_d + 1 < size)
 	{
-		dest[len + i] = src[i];
+		dest[len_d + i] = src[i];
 		i++;
 	}
-	return (len + i);
+	dest[len_d + i] = '\0';
+	return (len_d + len_s);
 }
 /*
 #include <stdio.h>
 int main(void)
 {
 	char dest[] = "Hello";
-	unsigned int l = ft_strlcat(dest, "World",10);
+	char src[] = "World";
+	unsigned int l = ft_strlcat(dest, src, 11);
 
 	printf("%d %s", l, dest);
 	return 0;

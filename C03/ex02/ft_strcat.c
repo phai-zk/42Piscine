@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 15:56:33 by chinujte          #+#    #+#             */
-/*   Updated: 2024/05/29 16:27:25 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/04 17:22:12 by cnzk             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ char	*ft_strcat(char *dest, char *src)
 		dest[len + i] = src[i];
 		i++;
 	}
+	dest[len + i] = '\0';
 	return (dest);
 }
 /*
@@ -39,8 +40,8 @@ char	*ft_strcat(char *dest, char *src)
 #include <string.h>
 int main(int argc, char const *argv[])
 {
-	char    dest[15] = "Hello ";
-	char    src[15] = "World";
+	char    dest[20] = "Hello ";
+	char    src[20] = "World";
 	printf("%s\n", ft_strcat(dest, src));
 	// printf("%s", strcat(dest, src));
 	return 0;

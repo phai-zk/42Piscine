@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 16:56:33 by chinujte          #+#    #+#             */
-/*   Updated: 2024/05/31 15:53:18 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/04 18:33:26 by cnzk             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ char	*check(char *str, char *find)
 
 char	*ft_strstr(char *str, char *to_find)
 {
+	if (to_find[0] == '\0')
+        return str; 
 	while (*str)
 	{
 		if (str[0] == to_find[0])
@@ -34,13 +36,13 @@ char	*ft_strstr(char *str, char *to_find)
 	}
 	return (0);
 }
-/*
+
 #include <stdio.h>
 int main(void)
 {
 	char	str[] = "Hello World NaJa";
-	char	tofind[] = "World";
-	printf("%s", ft_strstr(str, tofind));
+	char	tofind[] = "";
+	char	*find = ft_strstr(str, tofind);
+	printf("%s", find);
 	return 0;
 }
-*/
