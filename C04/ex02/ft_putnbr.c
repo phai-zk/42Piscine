@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cnzk <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 00:02:20 by cnzk              #+#    #+#             */
-/*   Updated: 2024/05/30 00:30:48 by cnzk             ###   ########.fr       */
+/*   Updated: 2024/06/05 03:05:13 by cnzk             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,12 @@ void	print(char c)
 
 void	ft_putnbr(int nb)
 {
-	if (nb >= 2147483648)
+	if (nb <= -2147483648)
 	{
+		print('-');
 		print('2');
 		nb = 147483648;
 	}
-	if (nb <= -2147483648)
-        {
-                print('-');
-                print('2');
-                nb = 147483648;
-        }
 	if (nb < 0)
 	{
 		print('-');
@@ -43,9 +38,10 @@ void	ft_putnbr(int nb)
 	}
 	print(nb + '0');
 }
-
+/*
 int	main(void)
 {
 	ft_putnbr(42);
 	return (0);
 }
+*/

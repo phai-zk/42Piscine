@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 01:41:15 by cnzk              #+#    #+#             */
-/*   Updated: 2024/05/31 16:26:59 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/05 04:23:19 by cnzk             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,6 @@ int	turn_to_int(char *str)
 
 int ft_atoi(char *str)
 {
-	char	*nbr;
 	int		i;
 	int		j;
 	int		arbitrary;
@@ -78,10 +77,8 @@ int ft_atoi(char *str)
 	arbitrary = 1;
 	while (str[i])
 	{
-		
 		if (is_numeric(str[i]))
 		{
-			nbr[j] = str[i];
 			j++;
 		}	        
 		else if (!(is_arbitrary(str[i], &arbitrary)))
