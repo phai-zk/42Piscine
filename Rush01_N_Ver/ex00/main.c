@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/02 18:33:54 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/02 22:21:00 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/05 02:13:12 by cnzk             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ int	find_n(char *av, int *n)
 	{
 		if ('1' <= av[i] && av[i] <= '9' && i % 2 == 0)
 			num++;
-		if (av[i] != ' ' && i % 2 != 0)
+		else if (av[i] != ' ')
 		{
-			str_print("Error! -wrong format");
+			str_print("Error! -wrong format\n");
 			return (1);
 		}
 		i++;
@@ -39,27 +39,20 @@ int	find_n(char *av, int *n)
 int	check_intput(char *av, int *n)
 {
 	int	len;
-
+	int	i;
+	
 	len = str_len(av);
-	if (len != 31)
+	i = 4;
+	while (i <= 9)
 	{
-		if (len != 39)
+		if (len == (i * i * 2) - 1)
 		{
-			if (len != 47)
-			{
-				if (len != 55)
-				{
-					if (len != 63)
-					{
-						if (len != 71)
-							return (1);
-					}
-				}
-			}
+			find_n(av, n);
+			return (0);
 		}
+		i++;
 	}
-	find_n(av, n);
-	return (0);
+	return (1);
 }
 
 int	main(int argc, char **argv)
@@ -75,10 +68,7 @@ int	main(int argc, char **argv)
 	}
 	if (check_intput(argv[1], &n))
 	{
-		str_print("Error! -Please type ");
-		print_char(((n * n) / 10) + 48);
-		print_char(((n * n) % 10) + 48);
-		str_print(" number only \n");
+		str_print("Error! -Not enough info\n");
 		return (1);
 	}
 	frame = str_to_matrix(argv[1], n);
@@ -86,7 +76,7 @@ int	main(int argc, char **argv)
 	if (solve(frame, tab, 0, n))
 		str_print_map(tab, n);
 	else
-		str_print("Error! -can't find solution :(");
+		str_print("Error! -can't find solution :(\n");
 	free_all(frame, tab, n);
 	return (0);
 }
