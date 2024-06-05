@@ -5,14 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/05 18:55:22 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/05 18:57:36 by chinujte         ###   ########.fr       */
+/*   Created: 2024/06/05 21:30:24 by chinujte          #+#    #+#             */
+/*   Updated: 2024/06/05 22:16:05 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-int	find_sign(char *str, int *sign, int *index)
+int	find_sign(char *str, int *sign, char *base_number)
 {
 	int	i;
 
@@ -25,39 +23,48 @@ int	find_sign(char *str, int *sign, int *index)
 		if ((str[i] == '-' || str[i] == '+') && str[i + 1] == ' ')
 			return (0);
 		i++;
+		str++;
 	}
-	*index = i;
+	*base_number = str;
 	return (1);
 }
 
-int	ft_atoi(char *str)
+int	base_check(char *base, int *base_code)
 {
-	int	sign;
-	int	num_index;
-	int	number;
-	int	pow;
+	char	*hex_base;
+	int		i;
 
-	number = 0;
-	pow = 0;
-	if (find_sign(str, &sign, &num_index))
+	hex_base = "0123456789ABCDEF";
+	i = 0;
+	*base_code = 0;
+	while (base[i])
 	{
-		while (str[num_index])
-		{
-			if ('0' <= str[num_index] && str[num_index] <= '9')
-			{
-				number *= pow * 10;
-				number += str[num_index] - 48;
-			}
-			else
-				return (number * sign);
-			pow++;
-			num_index++;
-		}
+		if (base[i] != hex_base[i])
+			return (1);	
+		i++;
 	}
+	*base_code = i;
 	return (0);
+}
+
+int	is_numeric(char c)
+{
+	return ('0' <= c && c <= '9');
 }
 
 int ft_atoi_base(char *str, char *base)
 {
-    
+	int		sign;
+	char	*base_number;
+	int		base_code;
+	int		number;
+
+	if (base_check(base, &base_code))
+		return (0);	
+	number = 0;
+	if (find_sign(str, &sign, base_number))
+	{
+		
+	}
+	return (0);
 }

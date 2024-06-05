@@ -6,7 +6,7 @@
 /*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 18:14:03 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/05 18:43:13 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/05 21:44:35 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,10 +60,9 @@ void	ft_putnbr_base(int nbr, char *base)
 		turn_to_base(nbr, base_number, base);
 	}
 }
-/*
+
 int	main(void)
 {
-	ft_putnbr_base(-10, "0123456789ABCDEF");
+	ft_putnbr_base(20, "01");
 	return (0);
 }
-*/
