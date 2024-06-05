@@ -1,14 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/31 01:41:15 by cnzk              #+#    #+#             */
-/*   Updated: 2024/06/05 18:55:58 by chinujte         ###   ########.fr       */
+/*   Created: 2024/06/05 18:55:22 by chinujte          #+#    #+#             */
+/*   Updated: 2024/06/05 18:57:36 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 int	find_sign(char *str, int *sign, int *index)
 {
@@ -28,11 +30,6 @@ int	find_sign(char *str, int *sign, int *index)
 	return (1);
 }
 
-int	is_numeric(char c)
-{
-	return ('0' <= c && c <= '9');
-}
-
 int	ft_atoi(char *str)
 {
 	int	sign;
@@ -46,7 +43,7 @@ int	ft_atoi(char *str)
 	{
 		while (str[num_index])
 		{
-			if (is_numeric(str[num_index]))
+			if ('0' <= str[num_index] && str[num_index] <= '9')
 			{
 				number *= pow * 10;
 				number += str[num_index] - 48;
@@ -59,14 +56,8 @@ int	ft_atoi(char *str)
 	}
 	return (0);
 }
-/*
-#include <stdio.h>
 
-int main(int argc, char **argv)
+int ft_atoi_base(char *str, char *base)
 {
-	if (argc != 2)
-		return (0);
-	printf("%d", ft_atoi(argv[1]));
-	return 0;
+    
 }
-*/

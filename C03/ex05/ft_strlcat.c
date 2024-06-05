@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 19:05:23 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/05 01:23:14 by cnzk             ###   ########.fr       */
+/*   Updated: 2024/06/05 15:24:18 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	len_d = _strlen(dest);
 	len_s = _strlen(src);
 	if (size <= len_d)
-		return (size + len_s);	
+		return (size + len_s);
 	while (src[i] && i + len_d + 1 < size)
 	{
 		dest[len_d + i] = src[i];

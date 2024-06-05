@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 16:56:33 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/04 18:33:26 by cnzk             ###   ########.fr       */
+/*   Updated: 2024/06/05 14:32:20 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*check(char *str, char *find)
 char	*ft_strstr(char *str, char *to_find)
 {
 	if (to_find[0] == '\0')
-        return str; 
+		return (str);
 	while (*str)
 	{
 		if (str[0] == to_find[0])
@@ -36,7 +36,7 @@ char	*ft_strstr(char *str, char *to_find)
 	}
 	return (0);
 }
-
+/*
 #include <stdio.h>
 int main(void)
 {
@@ -46,3 +46,4 @@ int main(void)
 	printf("%s", find);
 	return 0;
 }
+*/

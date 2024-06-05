@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 16:30:42 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/04 17:22:26 by cnzk             ###   ########.fr       */
+/*   Updated: 2024/06/05 14:30:55 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 unsigned int	_strlen(char *c)
 {
- 	unsigned int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (c[i])
