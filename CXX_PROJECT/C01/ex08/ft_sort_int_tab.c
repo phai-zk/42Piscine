@@ -6,7 +6,7 @@
 /*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 16:45:15 by chinujte          #+#    #+#             */
-/*   Updated: 2024/05/27 16:36:24 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/08 17:58:56 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,12 @@ void	ft_sort_int_tab(int *tab, int size)
 		}
 		i++;
 	}
+}
+
+
+int main()
+{
+	int i[] = {85, 54, 55, 56};
+	ft_sort_int_tab(i, 4);
+	return 0;
 }

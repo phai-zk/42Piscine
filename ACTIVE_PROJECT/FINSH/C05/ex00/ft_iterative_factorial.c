@@ -6,7 +6,7 @@
 /*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 01:16:59 by cnzk              #+#    #+#             */
-/*   Updated: 2024/06/08 13:29:22 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/08 16:43:32 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ int	ft_iterative_factorial(int nb)
 // #include <stdio.h>
 // int main(void)
 // {
-// 	printf("%d", ft_iterative_factorial(10));
+// 	printf("%d", ft_iterative_factorial(16));
 // 	return 0;
 // }

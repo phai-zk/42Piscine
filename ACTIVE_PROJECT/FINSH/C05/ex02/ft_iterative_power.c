@@ -6,7 +6,7 @@
 /*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 02:30:59 by cnzk              #+#    #+#             */
-/*   Updated: 2024/06/08 13:30:32 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/08 19:07:48 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ int	ft_iterative_power(int nb, int power)
 // #include <stdio.h>
 // int main(void)
 // {
-// 	printf("%d", ft_iterative_power(10, 3));	
+// 	printf("%d", ft_iterative_power(-5, 3));	
 // 	return 0;
 // }
