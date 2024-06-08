@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asudyodd <asudyodd@student.42.fr>          +#+  +:+       +#+        */
+/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 10:35:47 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/02 14:29:02 by asudyodd         ###   ########.fr       */
+/*   Updated: 2024/06/08 17:12:06 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lib/string.h"
 #include "lib/solve.h"
 
-int check_input(int argc, char **argv)
+int	check_input(int argc, char **argv)
 {
 	if (argc != 2)
 	{
 		str_print("Please input only 2 arguments :D.\n");
 		return (1);
-	}	
+	}
 	else if (str_len(argv[1]) != 31)
 	{
 		str_print("Please type number after by space.\n");

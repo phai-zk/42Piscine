@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/02 18:33:54 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/05 02:13:12 by cnzk             ###   ########.fr       */
+/*   Updated: 2024/06/08 17:11:35 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	check_intput(char *av, int *n)
 {
 	int	len;
 	int	i;
-	
+
 	len = str_len(av);
 	i = 4;
 	while (i <= 9)

@@ -6,7 +6,7 @@
 /*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 18:14:03 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/07 17:21:30 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/08 17:07:37 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	base_check(char *base, int *base_number)
 	char	*hex_base;
 	int		i;
 	int		j;
-	
+
 	i = 0;
 	j = 0;
 	*base_number = 0;
@@ -66,13 +66,13 @@ void	ft_putnbr_base(int nbr, char *base)
 	}
 }
 
-int	main(void)
-{
-	// ft_putnbr_base(-12, "01");
-	// printf("\n");
-	// ft_putnbr_base(-40, "poneyvif");
-	// printf("\n");
-	// ft_putnbr_base(894867, "+0123456789");
-	// printf("\n");
-	ft_putnbr_base(12, "0123456789ABCDEF");
-}
+// int	main(void)
+// {
+// 	// ft_putnbr_base(-12, "01");
+// 	// printf("\n");
+// 	// ft_putnbr_base(-40, "poneyvif");
+// 	// printf("\n");
+// 	// ft_putnbr_base(894867, "+0123456789");
+// 	// printf("\n");
+// 	ft_putnbr_base(12, "0123456789ABCDEF");
+// }

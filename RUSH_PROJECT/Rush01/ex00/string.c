@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   string.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asudyodd <asudyodd@student.42.fr>          +#+  +:+       +#+        */
+/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 10:58:27 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/02 14:23:24 by asudyodd         ###   ########.fr       */
+/*   Updated: 2024/06/08 17:10:51 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,10 +60,10 @@ int	count_arg_num(char *input)
 
 	i = 0;
 	while (i < 32)
-    {
-	    if (input[i] < '1' || input[i] > '4')
+	{
+		if (input[i] < '1' || input[i] > '4')
 			return (1);
-		i+=2;
+		i += 2;
 	}
 	return (0);
 }

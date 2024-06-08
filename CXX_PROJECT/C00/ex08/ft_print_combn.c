@@ -6,7 +6,7 @@
 /*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 00:03:52 by cnzk              #+#    #+#             */
-/*   Updated: 2024/05/26 20:20:53 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/08 17:06:22 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ void	ft_print_combn(int n)
 	}
 }
 
-int main(int argc, char const *argv[])
-{
-	ft_print_combn(9);
-	return 0;
-}
+// int main(int argc, char const *argv[])
+// {
+// 	ft_print_combn(9);
+// 	return (0);
+// }
