@@ -6,7 +6,7 @@
 /*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 14:41:49 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/08 14:54:58 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/08 16:45:20 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ int	ft_is_prime(int nb)
 
 int	ft_find_next_prime(int nb)
 {
+	if (nb < 2)
+		return (2);
 	if (ft_is_prime(nb))
 		return (nb);
 	while (!ft_is_prime(nb))
@@ -59,7 +61,7 @@ int	ft_find_next_prime(int nb)
 // 	i = 0;
 // 	while (i <= 100)
 // 	{
-// 		printf("%d next prime is %d\n",i ,ft_find_next_prime(i));
+// 		printf("%d next prime is %d\n",i ,ft_find_next_prime(-38));
 // 		i++;
 // 	}
 // 	return (0);
