@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_params.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 15:35:58 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/08 18:01:14 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/09 19:54:50 by cnzk             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,30 +17,42 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
+void	ft_swap(char **tab, int i, int j)
+{
+	char	*base;
+	
+	base = tab[i];
+	tab[i] = tab[j];
+	tab[j] = base;
+}
+
 void	ft_sort_char_tab(char **tab, int size)
 {
-	int		i;
-	int		j;
-	char	*base;
+	int	i;
+	int	j;
+	int	k;
 
 	i = 1;
 	while (i < size)
 	{
-		j = i;
+		j = 1;
 		while (j < size)
 		{
-			if (tab[i] < tab[j])
+			if (tab[i][0] < tab[j][0])
+				ft_swap(tab, i, j);
+			else if (tab[i][0] == tab[j][0])
 			{
-				base = tab[i];
-				tab[i] = tab[j];
-				tab[j] = base;
+				k = 1;
+				while (tab[i][k] != tab[j][k] && tab[i][k] && tab[j][k])
+					k++;
+				if (tab[i][k] < tab[j][k])
+					ft_swap(tab, i, j);
 			}
 			j++;
 		}
 		i++;
 	}
 }
-
 
 void	ft_putarg(int ac, char **str)
 {
