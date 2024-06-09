@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 18:14:03 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/08 17:07:37 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/09 21:14:38 by cnzk             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,11 +68,11 @@ void	ft_putnbr_base(int nbr, char *base)
 
 // int	main(void)
 // {
-// 	// ft_putnbr_base(-12, "01");
-// 	// printf("\n");
-// 	// ft_putnbr_base(-40, "poneyvif");
-// 	// printf("\n");
-// 	// ft_putnbr_base(894867, "+0123456789");
-// 	// printf("\n");
+// 	ft_putnbr_base(-12, "01");
+// 	ft_putchar('\n');
+// 	ft_putnbr_base(-40, "poneyvif");
+// 	ft_putchar('\n');
+// 	ft_putnbr_base(894867, "0123456789");
+// 	ft_putchar('\n');
 // 	ft_putnbr_base(12, "0123456789ABCDEF");
 // }

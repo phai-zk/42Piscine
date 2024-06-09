@@ -3,12 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 01:41:15 by cnzk              #+#    #+#             */
-/*   Updated: 2024/06/05 18:55:58 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/10 00:59:16 by cnzk             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+int	whitespace(char c)
+{
+	return ((9 <= c && c <= 13) || c == ' ');
+}
 
 int	find_sign(char *str, int *sign, int *index)
 {
@@ -16,7 +21,7 @@ int	find_sign(char *str, int *sign, int *index)
 
 	i = 0;
 	*sign = 1;
-	while (str[i] == ' ' || str[i] == '+' || str[i] == '-')
+	while (whitespace(str[i]) || str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')
 			*sign *= -1;
@@ -38,28 +43,25 @@ int	ft_atoi(char *str)
 	int	sign;
 	int	num_index;
 	int	number;
-	int	pow;
 
 	number = 0;
-	pow = 0;
 	if (find_sign(str, &sign, &num_index))
 	{
 		while (str[num_index])
 		{
 			if (is_numeric(str[num_index]))
 			{
-				number *= pow * 10;
+				number *= 10;
 				number += str[num_index] - 48;
 			}
 			else
 				return (number * sign);
-			pow++;
 			num_index++;
 		}
 	}
-	return (0);
+	return (number * sign);
 }
-/*
+
 #include <stdio.h>
 
 int main(int argc, char **argv)
@@ -69,4 +71,4 @@ int main(int argc, char **argv)
 	printf("%d", ft_atoi(argv[1]));
 	return 0;
 }
-*/
+
