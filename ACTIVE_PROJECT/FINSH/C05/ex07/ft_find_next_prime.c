@@ -3,43 +3,46 @@
 /*                                                        :::      ::::::::   */
 /*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 14:41:49 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/08 16:42:46 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/09 18:34:45 by cnzk             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	get_basic_prime(int basic_prime[6])
+int check_sqrt(int nb, int *result)
 {
-	basic_prime[0] = 2;
-	basic_prime[1] = 3;
-	basic_prime[2] = 5;
-	basic_prime[3] = 7;
-	basic_prime[4] = 11;
-	basic_prime[5] = 19;
-	basic_prime[6] = 0;
+	long i;
+
+	if (nb <= 0)
+		return (0);
+	i = 1;
+	while (nb != i * i)
+	{
+		if (nb < i * i)
+		{
+			*result = i - 1;
+			return (0);
+		}
+		i++;
+	}
+	*result = i;
+	return (1);
 }
 
-int	ft_is_prime(int nb)
+int ft_is_prime(int nb)
 {
-	int	basic_prime[7];
-	int	check;
-	int	i;
+	int root;
 
-	if (nb < 2)
+	if (check_sqrt(nb, &root))
 		return (0);
-	get_basic_prime(basic_prime);
-	i = -1;
-	check = 0;
-	while (basic_prime[++i])
+	while (root < nb)
 	{
-		if (nb == basic_prime[i])
-			return (1);
-		if (nb % basic_prime[i] != 0)
-			check++;
+		if (root > 1 && nb % root == 0)
+			return (0);
+		root++;
 	}
-	return (check == 6);
+	return (1);
 }
 
 int	ft_find_next_prime(int nb)
@@ -61,7 +64,7 @@ int	ft_find_next_prime(int nb)
 // 	i = 0;
 // 	while (i <= 100)
 // 	{
-// 		printf("%d next prime is %d\n",i ,ft_find_next_prime(-38));
+// 		printf("%d next prime is %d\n",i ,ft_find_next_prime(i));
 // 		i++;
 // 	}
 // 	return (0);

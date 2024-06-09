@@ -3,55 +3,58 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 13:58:24 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/08 21:42:32 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/09 18:33:20 by cnzk             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_sqrt(int nb)
+int check_sqrt(int nb, int *result)
 {
-	long	result;
+	long i;
 
 	if (nb <= 0)
 		return (0);
-	result = 0;
-	while (nb != result * result)
+	i = 1;
+	while (nb != i * i)
 	{
-		if (nb < result * result)
+		if (nb < i * i)
+		{
+			*result = i - 1;
 			return (0);
-		result++;
+		}
+		i++;
 	}
-	return (result);
+	*result = i;
+	return (1);
 }
 
-int	ft_sqrt(int nb)
+int ft_is_prime(int nb)
 {
-	long	result;
+	int root;
 
-	result = 0;
-	while (nb != result * result)
-	{
-		if (nb < result * result)
-			return (result - 1);
-		result++;
-	}
-	return (result);
-}
-
-int	ft_is_prime(int nb)
-{
-	int	root;
-
-	root = ft_sqrt(nb);
-	if (root != 0)
+	if (check_sqrt(nb, &root))
 		return (0);
-	
-	while ()
+	while (root < nb)
 	{
-		/* code */
+		if (root > 1 && nb % root == 0)
+			return (0);
+		root++;
 	}
-	
-	return (0);
+	return (1);
 }
+
+// #include <stdio.h>
+// int main(void)
+// {
+// 	int i;
+
+// 	i = 0;
+// 	while (++i < 1000)
+// 	{
+// 		if (ft_is_prime(i))
+// 			printf("%d is prime\n", i);
+// 	}
+// 	return 0;
+// }
