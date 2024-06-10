@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 18:04:54 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/10 22:23:08 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/11 05:30:20 by cnzk             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-int	str_len(char *str)
+int str_len(char *str)
 {
-	int	len;
+	int len;
 
 	len = 0;
 	while (str[len])
@@ -23,11 +23,12 @@ int	str_len(char *str)
 	return (len);
 }
 
-int	str_full_len(int *size, char **strs, char *sep)
+int str_full_len(int *size, char **strs, char *sep)
 {
-	int	i;
-	int	sep_len;
-	int	len;
+	int i;
+	int sep_len;
+	int len;
+	int lim;
 
 	i = 0;
 	len = 0;
@@ -38,44 +39,51 @@ int	str_full_len(int *size, char **strs, char *sep)
 		len += sep_len;
 		i++;
 	}
-	*size = i;
-	return (len - sep_len);	
+	return (len - sep_len);
+}
+
+char *ft_strcat(char *dest, char *src)
+{
+	int len;
+	int i;
+
+	len = str_len(dest);
+	i = 0;
+	while (src[i])
+	{
+		dest[len + i] = src[i];
+		i++;
+	}
+	dest[len + i] = '\0';
+	return (dest);
 }
 
 char *ft_strjoin(int size, char **strs, char *sep)
 {
-	char	*dest;
-	int		i;
-	int		j;
-	int		k;
-	
+	char *dest;
+	int i;
+
 	if (size <= 0)
 		return ((char *)malloc(sizeof(char)));
 	dest = (char *)malloc(str_full_len(&size, strs, sep) + 1);
 	if (!dest)
 		return (0);
 	i = -1;
-	k = 0;
-	while (i < str_full_len(&size, strs, sep) && k < size)
+	while (++i < size)
 	{
-		j = -1;
-		while (sep[++j] && i > 0)
-			dest[++i] = sep[j];
-		j = -1;
-		while (strs[k][++j])
-			dest[++i] = strs[k][j];
-		k++;
+		ft_strcat(dest, strs[i]);
+		if (i < size - 1)
+			ft_strcat(dest, sep);
 	}
-	dest[++i] = '\0';
 	return (dest);
 }
 
-int	main(void)
-{
-	char	*strs[] = {"1World", "Hwllo", "\r","fiuytfgui6543","dasadasd"};
-	char	*sep = "";
-	char	*str;
-	str = ft_strjoin(9, strs, sep);
-	printf("%s", str);
-	return	(0);
-}
+// int main(void)
+// {
+// 	char *strs[] = {"1World", "Hwllo", "\t", "fiuytfgui6543", "dasadasd"};
+// 	char *sep = ";";
+// 	char *str;
+// 	str = ft_strjoin(2, strs, sep);
+// 	printf("%s", str);
+// 	return (0);
+// }
