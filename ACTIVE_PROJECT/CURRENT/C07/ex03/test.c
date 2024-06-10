@@ -29,7 +29,7 @@ char *ft_strjoin(int size, char **strs, char *sep) {
     char *dest;
     int i, j, k, pos;
 
-    if (size <= 0)
+    if (size <= 0 || !strs)
         return (char *)malloc(sizeof(char));
 
     dest = (char *)malloc(str_full_len(size, strs, sep) + 1);
@@ -53,10 +53,20 @@ int main(void) {
     char *strs[] = {"1World", "Hello", "\r", "fiuytfgui6543", "dasadasd"};
     char *sep = "";
     char *str;
-    str = ft_strjoin(5, strs, sep); // size should match the number of strings
+    int strs_size = sizeof(strs) / sizeof(strs[0]); // Calculate the actual number of elements
+
+    str = ft_strjoin(strs_size, strs, sep); // Pass the correct size
     if (str) {
-        printf("%s", str);
+        printf("%s\n", str);
         free(str); // Don't forget to free the allocated memory
     }
+
+    // Test case with size greater than actual number of elements
+    str = ft_strjoin(6, strs, sep); // size greater than number of elements in strs
+    if (str) {
+        printf("%s\n", str);
+        free(str); // Don't forget to free the allocated memory
+    }
+
     return 0;
 }
