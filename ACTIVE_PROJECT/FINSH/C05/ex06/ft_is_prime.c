@@ -6,7 +6,7 @@
 /*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 13:58:24 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/10 16:51:19 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/10 20:19:54 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ int	check_sqrt(int nb, int *result)
 int	ft_is_prime(int nb)
 {
 	int	root;
-
-	if (check_sqrt(nb, &root))
+	
+	if (check_sqrt(nb, &root) || nb <= 0)
 		return (0);
 	while (root < nb)
 	{
@@ -50,7 +50,7 @@ int	ft_is_prime(int nb)
 // {
 // 	int i;
 
-// 	i = 0;
+// 	i = -1000;
 // 	while (++i < 1000)
 // 	{
 // 		if (ft_is_prime(i))

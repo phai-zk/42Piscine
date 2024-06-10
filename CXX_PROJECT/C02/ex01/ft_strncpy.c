@@ -6,7 +6,7 @@
 /*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 18:25:17 by chinujte          #+#    #+#             */
-/*   Updated: 2024/05/29 21:59:33 by cnzk             ###   ########.fr       */
+/*   Updated: 2024/06/10 20:09:30 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,5 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	}
 	return (dest);
 }
+
+#include <stdio.h>
