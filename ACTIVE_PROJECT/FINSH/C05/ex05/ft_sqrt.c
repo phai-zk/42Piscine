@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 13:32:51 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/09 17:54:50 by cnzk             ###   ########.fr       */
+/*   Updated: 2024/06/10 16:54:40 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_sqrt(int nb)
 	}
 	return (result);
 }
-
+// #include<stdio.h>
 // int    main(void)
 // {
 // 	printf("sqrt of %d is %d\n", -2282, ft_sqrt(-2282));
@@ -45,5 +45,5 @@ int	ft_sqrt(int nb)
 // 	printf("sqrt of %d is %d\n", 1411303165, ft_sqrt(1411303165));
 // 	printf("sqrt of %d is %d\n", 259564321, ft_sqrt(259564321));
 // 	printf("sqrt of %d is %d\n", 416153106, ft_sqrt(416153106));
-// 	return (0);
+//         return (0);
 // }

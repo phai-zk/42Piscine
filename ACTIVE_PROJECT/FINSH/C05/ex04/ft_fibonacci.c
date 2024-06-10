@@ -6,7 +6,7 @@
 /*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 13:05:31 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/08 20:10:25 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/10 16:47:00 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int	ft_fibonacci(int index)
 		return (index);
 	return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
 }
-
 
 // #include <stdio.h>
 // int	main()

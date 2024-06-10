@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_params.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 15:35:58 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/09 19:54:50 by cnzk             ###   ########.fr       */
+/*   Updated: 2024/06/10 17:36:10 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_putchar(char c)
 void	ft_swap(char **tab, int i, int j)
 {
 	char	*base;
-	
+
 	base = tab[i];
 	tab[i] = tab[j];
 	tab[j] = base;
@@ -43,7 +43,7 @@ void	ft_sort_char_tab(char **tab, int size)
 			else if (tab[i][0] == tab[j][0])
 			{
 				k = 1;
-				while (tab[i][k] != tab[j][k] && tab[i][k] && tab[j][k])
+				while (tab[i][k] == tab[j][k] && (tab[i][k] || tab[j][k]))
 					k++;
 				if (tab[i][k] < tab[j][k])
 					ft_swap(tab, i, j);

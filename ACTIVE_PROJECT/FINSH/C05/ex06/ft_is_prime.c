@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 13:58:24 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/09 18:33:20 by cnzk             ###   ########.fr       */
+/*   Updated: 2024/06/10 16:51:19 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int check_sqrt(int nb, int *result)
+int	check_sqrt(int nb, int *result)
 {
-	long i;
+	long	i;
 
 	if (nb <= 0)
 		return (0);
@@ -30,9 +30,9 @@ int check_sqrt(int nb, int *result)
 	return (1);
 }
 
-int ft_is_prime(int nb)
+int	ft_is_prime(int nb)
 {
-	int root;
+	int	root;
 
 	if (check_sqrt(nb, &root))
 		return (0);

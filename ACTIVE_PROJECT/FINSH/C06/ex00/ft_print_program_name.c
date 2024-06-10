@@ -6,7 +6,7 @@
 /*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 15:21:53 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/08 16:04:04 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/10 17:21:25 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_putstr(char *str)
 
 int	main(int ac, char **av)
 {
-	if (ac != 1)
+	if (ac < 1)
 		return (1);
 	ft_putstr(av[0]);
 	ft_putstr("\n");
