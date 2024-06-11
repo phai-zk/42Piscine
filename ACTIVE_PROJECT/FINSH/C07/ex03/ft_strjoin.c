@@ -6,16 +6,16 @@
 /*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 18:04:54 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/11 14:26:18 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/11 20:15:25 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-int str_len(char *str)
+int	str_len(char *str)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	while (str[len])
@@ -23,12 +23,11 @@ int str_len(char *str)
 	return (len);
 }
 
-int str_full_len(int *size, char **strs, char *sep)
+int	str_full_len(int *size, char **strs, char *sep)
 {
-	int i;
-	int sep_len;
-	int len;
-	int lim;
+	int	i;
+	int	sep_len;
+	int	len;
 
 	i = 0;
 	len = 0;
@@ -42,10 +41,10 @@ int str_full_len(int *size, char **strs, char *sep)
 	return (len - sep_len);
 }
 
-char *ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
-	int len;
-	int i;
+	int	len;
+	int	i;
 
 	len = str_len(dest);
 	i = 0;
@@ -58,10 +57,10 @@ char *ft_strcat(char *dest, char *src)
 	return (dest);
 }
 
-char *ft_strjoin(int size, char **strs, char *sep)
+char	*ft_strjoin(int size, char **strs, char *sep)
 {
-	char *dest;
-	int i;
+	char	*dest;
+	int		i;
 
 	if (size <= 0)
 		return ((char *)malloc(sizeof(char)));
