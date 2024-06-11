@@ -6,18 +6,12 @@
 /*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 06:38:00 by cnzk              #+#    #+#             */
-/*   Updated: 2024/06/11 06:55:59 by cnzk             ###   ########.fr       */
+/*   Updated: 2024/06/11 07:20:32 by cnzk             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-
-typedef struct s_stock_str
-{
-	int size;
-	char *str;
-	char *copy;
-}	t_stock_str;
+#include "./ft_stock_str.h"
 
 int	str_len(char *str)
 {
@@ -68,19 +62,19 @@ struct s_stock_str *ft_strs_to_tab(int ac, char **av)
 	return tab;
 }
 
-int	main(int argc, char **argv)
-{
-	int					index;
-	struct s_stock_str	*structs;
+// int	main(int argc, char **argv)
+// {
+// 	int					index;
+// 	struct s_stock_str	*structs;
 
-	structs = ft_strs_to_tab(argc, argv);
-	index = 0;
-	while (index < argc)
-	{
-		printf("%d\n", index);
-		printf("\t| original : $%s$ @ %p\n", structs[index].str, structs[index].str);
-		printf("\t|   copied : $%s$ @ %p\n", structs[index].copy, structs[index].copy);
-		printf("\t|     size : %d\n", structs[index].size);
-		index++;
-	}
-}
+// 	structs = ft_strs_to_tab(argc, argv);
+// 	index = 0;
+// 	while (index < argc)
+// 	{
+// 		printf("%d\n", index);
+// 		printf("\t| original : $%s$ @ %p\n", structs[index].str, structs[index].str);
+// 		printf("\t|   copied : $%s$ @ %p\n", structs[index].copy, structs[index].copy);
+// 		printf("\t|     size : %d\n", structs[index].size);
+// 		index++;
+// 	}
+// }
