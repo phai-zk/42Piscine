@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 05:36:51 by cnzk              #+#    #+#             */
-/*   Updated: 2024/06/11 05:39:02 by cnzk             ###   ########.fr       */
+/*   Created: 2024/06/11 15:30:58 by chinujte          #+#    #+#             */
+/*   Updated: 2024/06/11 15:42:12 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifdef FT_H
-# define FT_H
+int	ft_strcmp(char *s1, char *s2)
+{
+		int	i;
 
-void	ft_putchar(char c);
-void	ft_swap(int *a, int *b);
-void	ft_putstr(char *str);
-int		ft_strlen(char *str);
-int		ft_strcmp(char *s1, char *s2);
-
-#endif
+		i = 0;
+		while (s1[i] == s2[i] && (s1[i] || s2[i]))
+		{
+			if (!(s1[i] || s2[i]))
+					return (0);
+			i++;
+		}
+		return (s1[i] - s2[i]);
+}

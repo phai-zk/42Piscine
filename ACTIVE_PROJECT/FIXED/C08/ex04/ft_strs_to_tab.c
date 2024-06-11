@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strs_to_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 06:38:00 by cnzk              #+#    #+#             */
-/*   Updated: 2024/06/11 07:20:32 by cnzk             ###   ########.fr       */
+/*   Updated: 2024/06/11 18:07:47 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ int	str_len(char *str)
 	len = 0;
 	while (str[len])
 		len++;
-	return (len);		
+	return (len);
 }
 
-char *ft_strdup(char *src)
+char	*ft_strdup(char *src)
 {
 	int		i;
 	int		len;
@@ -36,32 +36,34 @@ char *ft_strdup(char *src)
 	i = 0;
 	while (src[i])
 	{
-		dest[i] = src[i]; 
+		dest[i] = src[i];
 		i++;
 	}
 	dest[i] = '\0';
 	return (dest);
 }
 
-struct s_stock_str *ft_strs_to_tab(int ac, char **av)
+struct	s_stock_str	*ft_strs_to_tab(int ac, char **av)
 {
-	t_stock_str *tab;
-	int	i;
-	
+	t_stock_str	*tab;
+	int			i;
+
 	tab = (t_stock_str *)malloc(sizeof(t_stock_str) * ac);
 	if (!tab)
 		return (0);
-	i = 0;
+	i = -1;
 	while (++i < ac)
 	{
-		tab[i - 1].size = str_len(av[i]);
-		tab[i - 1].str = av[i];
-		tab[i - 1].copy = ft_strdup(av[i]);
+		tab[i].size = str_len(av[i]);
+		tab[i].str = av[i];
+		tab[i].copy = ft_strdup(av[i]);
 	}
-	tab[i - 1].str = 0;
-	return tab;
+	tab[i].str = 0;
+	tab[i].copy = 0;
+	return (tab);
 }
 
+// #include <stdio.h>
 // int	main(int argc, char **argv)
 // {
 // 	int					index;
@@ -72,9 +74,9 @@ struct s_stock_str *ft_strs_to_tab(int ac, char **av)
 // 	while (index < argc)
 // 	{
 // 		printf("%d\n", index);
-// 		printf("\t| original : $%s$ @ %p\n", structs[index].str, structs[index].str);
-// 		printf("\t|   copied : $%s$ @ %p\n", structs[index].copy, structs[index].copy);
-// 		printf("\t|     size : %d\n", structs[index].size);
+// 		printf("\t| og : $%s$ %p\n", structs[index].str, structs[index].str);
+// 		printf("\t| cp : $%s$ %p\n", structs[index].copy, structs[index].copy);
+// 		printf("\t| size : %d\n", structs[index].size);
 // 		index++;
 // 	}
 // }

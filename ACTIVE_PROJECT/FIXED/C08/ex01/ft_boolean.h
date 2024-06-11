@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_boolean.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 05:48:23 by cnzk              #+#    #+#             */
-/*   Updated: 2024/06/11 06:36:56 by cnzk             ###   ########.fr       */
+/*   Updated: 2024/06/11 18:03:44 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 
 # include <unistd.h>
 
-typedef	enum t_bool
+typedef enum a_bool
 {
-	true = 1,
-	false = 0,
+	TRUE,
+	FALSE,
 }	t_bool;
 
-# define	TRUE true
-# define	FALSE false
-# define	EVEN(nb) (nb % 2 == 0)
-# define	EVEN_MSG "I have an even number of arguments."
-# define	ODD_MSG "I have an odd number of arguments."
-# define	SUCCESS 0
+# define EVEN(nbr) (nbr % 2 == 0)
+# define TRUE 1
+# define FALSE 0
+# define EVEN_MSG "I have an even number of arguments.\n"
+# define ODD_MSG "I have an odd number of arguments.\n"
+# define SUCCESS 0
 
 #endif

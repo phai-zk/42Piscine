@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/29 23:19:44 by cnzk              #+#    #+#             */
-/*   Updated: 2024/06/11 15:44:08 by chinujte         ###   ########.fr       */
+/*   Created: 2024/06/11 15:26:56 by chinujte          #+#    #+#             */
+/*   Updated: 2024/06/11 15:26:59 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putstr(char *str)
+void    ft_swap(int *a, int *b)
 {
-	while (*str)
-	{
-		write(1, str, 1);
-		str++;
-	}
-}
-/*
-int	main(void)
-{
-	char	i[] = "ABCDEFGhijklmnop1";
+        int     n;
 
-	ft_putstr(i);
-	return (0);
+        n = *a;
+        *a = *b;
+        *b = n;
 }
-*/

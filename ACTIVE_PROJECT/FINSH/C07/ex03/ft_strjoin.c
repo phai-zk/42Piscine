@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cnzk <cnzk@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 18:04:54 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/11 05:30:20 by cnzk             ###   ########.fr       */
+/*   Updated: 2024/06/11 14:26:18 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,10 +80,10 @@ char *ft_strjoin(int size, char **strs, char *sep)
 
 // int main(void)
 // {
-// 	char *strs[] = {"1World", "Hwllo", "\t", "fiuytfgui6543", "dasadasd"};
-// 	char *sep = ";";
+// 	char *strs[] = {"Hello", "World","\f", "This is", "C"};
+// 	char *sep = " ";
 // 	char *str;
-// 	str = ft_strjoin(2, strs, sep);
+// 	str = ft_strjoin(5, strs, sep);
 // 	printf("%s", str);
 // 	return (0);
 // }
