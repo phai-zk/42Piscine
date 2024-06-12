@@ -6,7 +6,7 @@
 /*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 18:04:54 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/11 20:15:25 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/12 15:49:13 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,4 +85,4 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 // 	str = ft_strjoin(5, strs, sep);
 // 	printf("%s", str);
 // 	return (0);
-// }
+// }		

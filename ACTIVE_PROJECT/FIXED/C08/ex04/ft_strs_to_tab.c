@@ -6,7 +6,7 @@
 /*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 06:38:00 by cnzk              #+#    #+#             */
-/*   Updated: 2024/06/11 18:07:47 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/12 15:48:05 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,10 @@ char	*ft_strdup(char *src)
 
 struct	s_stock_str	*ft_strs_to_tab(int ac, char **av)
 {
-	t_stock_str	*tab;
-	int			i;
+	struct s_stock_str	*tab;
+	int					i;
 
-	tab = (t_stock_str *)malloc(sizeof(t_stock_str) * ac);
+	tab = (struct s_stock_str *)malloc(sizeof(struct s_stock_str) * (ac + 1));
 	if (!tab)
 		return (0);
 	i = -1;
@@ -80,3 +80,15 @@ struct	s_stock_str	*ft_strs_to_tab(int ac, char **av)
 // 		index++;
 // 	}
 // }
+
+// #ifndef FT_STOCK_STR_H
+// # define FT_STOCK_STR_H
+
+// typedef struct s_stock_str
+// {
+// 	int			size;
+// 	char		*str;
+// 	char		*copy;
+// }	t_stock_str;
+
+// #endif
