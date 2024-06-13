@@ -6,7 +6,7 @@
 /*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 17:40:12 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/12 20:26:05 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/12 20:32:48 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ char	*get_word(char *str, char *sep)
 	size = str_len(str, sep);
 	dest = (char *)malloc(size + 1);
 	if (!dest)
-		return (char *)malloc(sizeof(char));
+		return ((char *)malloc(sizeof(char)));
 	while (i < size)
 	{
 		dest[i] = str[i];
@@ -92,7 +92,7 @@ char	**ft_split(char *str, char *charset)
 	size = word_count(str, charset) + 1;
 	tab = (char **)malloc(sizeof(char *) * size);
 	if (!tab)
-		return (char **)malloc(sizeof(char *));
+		return ((char **)malloc(sizeof(char *)));
 	while (*str)
 	{
 		while (*str && check_separator(*str, charset))
@@ -105,7 +105,7 @@ char	**ft_split(char *str, char *charset)
 		while (*str && !check_separator(*str, charset))
 			str++;
 	}
-	return (tab); 
+	return (tab);
 }
 
 // #include <stdio.h>
@@ -113,7 +113,7 @@ char	**ft_split(char *str, char *charset)
 // {
 // 	char	**str;
 // 	int		i;
-	
+
 // 	if (argc != 3)
 // 		return (1);
 // 	str = ft_split(argv[1], argv[2]);

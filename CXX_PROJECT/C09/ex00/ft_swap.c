@@ -6,15 +6,15 @@
 /*   By: chinujte <chinujte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 15:26:56 by chinujte          #+#    #+#             */
-/*   Updated: 2024/06/11 15:26:59 by chinujte         ###   ########.fr       */
+/*   Updated: 2024/06/12 20:29:43 by chinujte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_swap(int *a, int *b)
+void	ft_swap(int *a, int *b)
 {
-        int     n;
+	int	n;
 
-        n = *a;
-        *a = *b;
-        *b = n;
+	n = *a;
+	*a = *b;
+	*b = n;
 }
